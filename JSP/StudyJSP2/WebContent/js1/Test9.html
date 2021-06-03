@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+	
+	//Q. 변수의 값보다 크면서 가장 가까운 10의 배수를 찾아서
+	// 기존 변수의 값을 뺀 값을 출력
+	
+	//56 > 60 : 60 - 56 = 4 >> 60 -50 =10 
+	//91 > 100 : 100- 91 =9 >> 100- 90 =10
+	
+	//10 - 일의 자리 
+	// 10으로 나눴을때 나머지를 구하면 된다.
+	// 10 - 변수값%10
+	
+	var num = 56;
+	document.write("연산의 결과 : " + (10-num%10) + "<br>");
+	
+	document.write("<hr>");
+	//Q. 두 개의 주사위를 던졌을 때, 눈의 합이 6이 되는 경우의 수를 모두 출력
+	
+	//내 풀이
+	var cnt = 0;
+	for(var n=1;n<=6;n++){
+		for(var m=1;m<=6;m++){
+				if(m+n == 6){
+				document.write(m + " + " + n + " = " + (m+n) + "<br>" );	
+				cnt++;
+			}
+			
+		}
+		
+	}
+	
+	
+	document.write("총 : " + cnt + "개<br>");
+	
+	document.write("<hr>");
+	
+	//Q. 방정식 2x + y = 10 를 만족하는 모든 해를 구하시오. 
+	// x,y모두 정수 (0<=x<=10,0<=y<=10)
+	// "x = 00,y=00"
+	
+	for(var x = 0;x<=10;x++){
+		for(var y=0;y<=10;y++){
+			if((2*x)+(4*y)==10){
+				document.write("x= "+ x +", y= " + y + "<br>");
+			}
+			
+		}
+		
+	}
+	
+	
+	document.write("<hr>");
+	//Q. 1~20 까지의 숫자중에서 2의 배수가 아닌 숫자와 3의 배수도 아닌 숫자의 합을 출력
+	//
+	
+	var sum = 0;
+	for(var i=1;i<=20;i++){
+		
+			if(i%2 !=0 && i%3 != 0){
+				document.write(i+" ");
+				sum += i;			
+		}
+	
+	}
+	
+	document.write("총합 : "+ sum +"<hr>");
+	
+	
+	//Q. 1+(1+2)+(1+2+3)+......+(1+2+3.....+10)
+	//Q. 1+3+6+10+....+55
+		
+	var sum = 0;
+		for(var i=0;i<11;i++){
+			for(var j=1;j<=i;j++){
+				
+				sum += j;
+			}
+			
+		}
+	
+	document.write("<br>(내 풀이) 총 합 : " + sum + "<br>");
+	
+
+	var sum = 0;
+	var total_sum = 0;
+	for(var i=1;i<=10;i++){
+			sum += i;
+		//document.write(sum);
+		total_sum += sum; 
+	}
+	
+	document.write("total_sum : " + total_sum + "<br>")
+	
+	//Q. 1+(-2)+3+(-4)+... 숫자의 연산이 계속될때 연산의 총합이 100이 되는 시점의 값은 얼마인가?
+	
+			
+		var sum =0;	
+		for(var i=1;true;i++){
+			
+			if(i%2==0){
+				sum += -i;
+			}else{
+				sum += i;
+			}
+				
+				if(sum >= 100)//100에 맞아 떨어지지 않을때, 무한루프를 돌 수도 있다.
+					break;
+			
+			
+		}
+	
+	document.write("sum : "+sum+" i : "+i+"<br>");
+	
+	
+	/////////////////////////////////////////////////////
+	
+	var sum = 0;
+	var num = 0;
+	var s = 1; //값의 부호(+,-)
+	
+	for(var i=1;sum < 100;i++,s=-s){ //조건식에 반복문안의 변수로 조건 설정이 가능하다,증감식을 늘릴 수 있다.
+		
+		num = i * s; //
+		
+		sum += num;
+	}
+	
+	
+	//Q.구구단 가로 출력
+	
+	for(var a=0;a<=9;a++){// 1~9
+		for(var b=2;b<=9;b++){//2~9단
+			if(a == 0){
+				document.write("[ "+b+" 단 ] ");
+			}else{
+				document.write(b +" * "+ a +" = "+(b*a)+" ");
+			}
+		
+		}
+		document.write("<br>");
+	}
+	
+	
+	
+	</script>
+</head>
+<body>
+	<h1>Webcontent/js1/Test9.html </h1>
+</body>
+</html>

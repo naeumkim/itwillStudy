@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+//myCal(),매개변수3개,(숫자,문자.숫자)
+//  > 연산의 결과를 리턴
+// ex) (3,"+",3) > 6리턴
+// 문자 - 산술 연산자(+ - * / %),그 외 문자 : "연산의 결과 : 에러발생!"
+
+	function myCal(num1,op,num2){
+				var result = 0;
+				switch(op){
+				case "+" : 
+					result = num1 + num2;
+				break;
+				case "-" : 
+					result = num1 - num2;
+					break;
+				case "*" : 
+					result = num1 * num2;
+					break;				
+				case "%" :
+					result = num1 % num2;
+					break;
+				case "/" :
+					result = num1 / num2;
+					break;
+				}
+		
+				return result;
+		}
+
+		document.write(myCal(10,'*',2));
+
+		document.write("<hr>");
+		
+		var val = 200;
+		
+		
+		function valueFun(){
+			//지역 변수 : {} 특정 블록 내에서만 쓸 수 있음	
+			var val = 300; // 함수가 생길 때 같이 생기는 변수,블록밖에서 호출해도 사용x (특정 값을 사용)
+							// 함수 호출 시 생성 > 함수 종료시 삭제
+			
+			
+		}
+		
+		valueFun();
+		
+		document.write(val);
+		
+		
+		
+		
+
+</script>
+</head>
+<body>
+	<h1>Webcontent</h1>
+</body>
+</html>

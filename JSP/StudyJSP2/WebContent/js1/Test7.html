@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//반복문 : 코드를 반복하기위해서 사용하는 문장
+	// for, while, do-while
+	
+		//초기식 > 조건식 (참) > 실행문 > 증감식 
+ 		/* 
+ 		for(초기식;조건식;증감식){
+			반복할 실행문;
+			
+		} 
+		*/
+
+		//"안녕하세요!" 5번출력
+		
+		//document.write("안녕하세요." + "<br>");
+		
+		
+			for (var i=1;i<=5;i++) {
+				document.write("안녕하세요." + "<br>");
+			}	  
+		
+		
+		document.write("<hr>");
+		
+		
+		//1~10 숫자를 가로 출력
+		
+		for(var i=1;i<=10;i++){
+			document.write(i);	
+		
+		}
+		
+		document.write("<hr>");
+		
+		
+		// 11~25 숫자를 가로 출력
+		
+		for(var i=11; i<=25; i++){
+			document.write(i+" ");
+			
+		}
+		
+		document.write("<hr>");
+		
+		//1~10까지 숫자 중에서 홀수만 출력
+		
+		/* for(var i=1; i<=10; i++){
+			document.write(i+ " ");
+			i++;
+		} */
+		
+		for(var i=1; i<=10; i+=2){
+		document.write(i+ " ");
+		
+		} 
+		
+		
+		document.write("<hr>");
+		
+		
+		//1~10까지 숫자 중에서 짝수만 출력
+		
+		for(var i=2; i<=10;i+=2){
+			document.write(i+" ");
+		}
+			
+		
+		document.write("<hr>");
+		
+		
+		//10 ~ 1 역순으로 출력
+		
+		for(var i = 10;i>=1; i--){
+			document.write(i+" ");
+			
+		}
+		
+		document.write("<hr>");
+		
+		//구구단 2단 출력
+		
+		//[2단]
+		// 2 * 1 = 2
+		// 2 * 2 = 4
+		// ...
+		// 2 * 9 = 18
+		
+	
+	/* 	document.write(" [2단] <br> ");
+		for(var i=1;1<=9;i++){
+			document.write(2 +" * " + i +" = "+ (2*i) + "<br>");			
+		}		
+		  */
+		 
+		 document.write("<hr>");
+		// 누적합
+		// 1~10 까지의 숫자의 합 출력
+		
+		var sum = 0;
+		for(var i =1;i<=10;i++){
+		//sum = sum + i;
+			sum += i;
+
+		}
+
+		document.write("sum : " +sum+ "<br>"); 
+		 
+		
+		document.write("<hr>");
+		//while 반복문
+		/* 초기식;
+		while(조건식){
+			반복실행문;
+			증감식;
+		} */
+		
+		//1~10까지의 숫자 출력
+		
+		var i = 1;
+		while(i<=10){
+			document.write(i+" ");
+			i++;
+			
+		}
+		
+		document.write("<hr>");
+		
+		//while문 사용 1~100까지 숫자의 합을 출력
+		
+		var sum = 0;
+		var i = 1;
+		while(i<=100){
+			sum += i;
+			i++
+		}
+		document.write("총 합 :" + sum + " ");
+		
+		document.write("<hr>");
+		
+		//do-while 반복문 > 최소 한번이상 실행해야 끝남.
+		 /* 초기식;
+		do{
+			반복할코드;
+			증감식;
+		}while(조건식); */
+		
+		
+		var i = 1;
+		do{
+			document.write(i+" ");
+			i++;
+		}while(i<=10);
+		
+		document.write("<hr>");
+		
+		
+		for(var i = 0;i<5;i++);{//반복문 끝에 ; 반복문 따로 실행문 따로 > 하나만 출력
+			document.write(i);
+		}
+		
+		
+		// 무한 반복문 (무한루프) 
+		
+		for(;;){
+			document.write("무한 루프!");
+			
+		}
+		
+		
+		
+		
+		
+</script>
+
+
+</head>
+<body>
+
+<h1>Webcontent/js1/Test7.html</h1>
+
+</body>
+</html>

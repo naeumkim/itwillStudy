@@ -1,0 +1,5 @@
+<%
+	String col1 ="mint";
+	String col2 ="skyblue";
+	String col3 ="lightyellow";
+%>

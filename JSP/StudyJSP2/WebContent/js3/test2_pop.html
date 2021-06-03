@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function myClose(){
+		
+		//test2_pop 에 있는 정보 > test2로 전달
+		//document.ofr.txt.value="test_MSG";
+		opener.document.fr.txt.value=document.ofr.txt.value;
+		//test2.html					//test2_pop.html
+		
+		window.close();
+		
+	}
+
+
+</script>
+</head>
+<body>
+	<h1>Wencontent/js3/test2_pop.html</h1>
+	
+	
+	<input type="button" value="새창 종료하기" onclick="myClose();">
+	<hr>
+	<form action="" name="ofr">
+		<input type="text" name="txt" value="">
+	</form>
+	
+	
+</body>
+</html>

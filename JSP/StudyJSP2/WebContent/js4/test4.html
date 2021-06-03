@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function fun1(){
+		//select태그 자체의 속성
+		//window.document.폼태그.select 이름.속성
+		//			""		  .options[0].속성
+		alert("name : " + document.fr.subject.name);
+		//alert("name : " + document.fr.options[0].name);
+		alert("length : " + document.fr.subject.length);
+		// select 태그 포함된 옵션의 개수를 표시한다.
+		alert("type : " + document.fr.subject.type);
+		//단일 선택, 다중선택인지 알려줌
+		alert("selectedIndex : " + document.fr.subject.selectedIndex);
+		//선택한 옵션의 순번을 알려준다
+		
+
+	}
+
+	function fun2(){
+		//select안 선택지의 속성
+		//window.document.폼태그.select 이름.options[0].속성	
+		alert("value : " + document.fr.subject.options[2].value); //web
+		alert("text : " +document.fr.subject.options[2].text); //웹
+		alert("selected : " + document.fr.subject.options[2].selected );
+		//선택했는지에 대하여 t/f로 리턴
+
+		
+	}
+
+	function check1(){
+		
+		if(document.fr.subject.selectedIndex == 0){
+		//if(document.fr.subject.options[0].selected == true)
+		//if(document.fr.subject.options[0].selected)
+			alert("과목을 선택하세요!");
+			document.fr.subject.focus();
+			return;
+		}
+		
+		document.fr.submit();
+	}	
+
+
+function check2(){
+		
+		if(document.fr.subject.selectedIndex == 0){
+		//if(document.fr.subject.options[0].selected == true)
+		//if(document.fr.subject.options[0].selected)
+			alert("과목을 선택하세요!");
+			document.fr.subject.focus();
+			return false;
+		}
+		
+		
+	}
+	
+	
+	//select의 과목을 선택했을 때 선택한 과목의 이름을 출력(alert)
+	//"ooo이 선택되었습니다."
+	function check3(){
+	  var idx = document.fr.subject.selectedIndex;
+		alert(document.fr.subject.options[idx].text + " 선택되었습니다.");
+		
+	}
+	
+	
+</script>
+</head>
+<body>
+	<h1>Webcontent/js4/test4.html</h1>
+	
+	<fieldset>
+	<form action="" name ="fr" onsubmit="check2()">
+		과목을 선택하시오.
+		<!--select안에 삽입하여 형식 지정 가능 size ="3" multiple="multiple" -->
+		<select name ="subject" onchange="check3()">
+			<option value="">선택하시오</option>
+			<!-- 제목 역할을 하는 value엔 ""공백 -->
+			<option value="java">자바</option>
+			<option value="web">웹</option>
+			<option value="js">자바스크립트</option>
+			<option value="db">디비</option>
+		</select>
+		<input type = "submit" value="전송(submit)">
+	
+	
+		<hr>
+		
+		<input type="button" value="select 속성 확인하기" onclick="fun1()">
+		<input type="button" value="select 속성 확인하기" onclick="fun2()">
+		
+		<hr>
+		<!-- select 선택이 안된 경우 페이지 이동x,
+			과목이 선택된 경우 페이지 이동 후 정보 전달.
+		 -->
+		<input type="button" value="데이터 선택 후 페이지 이동" onclick="check1()">
+		<input type="button" value="데이터 선택 후 페이지 이동2" onclick="return check2()">
+	</form>
+	</fieldset>
+	
+</body>
+</html>
