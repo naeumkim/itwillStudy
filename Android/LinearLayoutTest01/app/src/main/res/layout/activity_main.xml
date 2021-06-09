@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="#4A673AB7"
+    >
+
+    <!--
+        android:background="#FF0000" 뷰그룹의 배경색 설정
+        android:orientation="vertical" 수직배치설정
+        android:orientation="horizontal" 수평배치설정
+    -->
+
+
+    <!--버튼1의 width값과 height값이 모든 wrapContent로 되어 있으므로 버튼 1의
+     텍스트 내용물에 맞춰서 너비와 높이를 설정한다.
+        android:layout_width="wrap_parent"
+        android:layout_height="wrap_content"
+
+
+
+
+
+   -->
+<!--    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼1"
+        /> -->
+
+
+    <!-- 버튼2의 layout_height의 속성의 값을 match_parent로 설정하면 Linearlayout뷰그룹의 높이를 따른다
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="버튼2"
+        />
+        -->
+
+<!--
+    <Button
+        android:id="@+id/button3"
+        android:text="버튼3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    />
+    -->
+
+    <!--
+        안드로이드에서 뷰(위젯)의 크기를 나타내는 단위
+        px(pixels) : 화면의 실제 픽셀을 나타냄, 픽셀은 권장되는 단위는 아니다
+        > 장치마다 화면의 밀도가 다르기때문
+        dp : dp는 화면의 밀도가 160dpi 화면에서 하나의 물리적인 픽셀을 말한다.
+        크기를 160dp로 지정하면 화면의 밀도와는 상관없이 항상 1cm가 됨
+        sp : 화면밀도와 사용자가 지정한 폰트크기에 영향을 받아서 변환됨. 폰트크기를 지정하는 경우에 추천됨
+        pt : 1/72 인치를 표시함
+        mm : 밀리미터 단위를 나타냄
+        in : 인치 단위를 나타냄
+
+        중요!
+        만약 장치의 종류에 관계없이 항상 동일한 크기로 표시되게 하려면 dp단위를 사용해야한다.
+        즉 화면에서 1인치를 표시하려면 160dp로 지정하면 된다.
+
+    -->
+
+    <!--
+      android:visibility 속성
+         초기에 앱 실행시 뷰(위젯)을 화면에 표시할건지 여부를 설정하는 속성
+         상수                  값                  설명
+         visible              0                   화면에 보이게 설정함,설정하지 않으면 기본값
+         invisible            1                   화면에 표시되지 않는다. 그러나 배치에서 공간을 차지함
+         gone                 2                   완전히 숨겨지게 한다.
+          -->
+
+
+    <Button
+        android:id="@+id/button4"
+        android:text="버튼4"
+        android:layout_width="200px"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+    />
+
+
+
+
+
+
+</LinearLayout>

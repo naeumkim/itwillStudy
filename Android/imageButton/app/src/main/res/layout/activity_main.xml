@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+   <Button
+       android:id="@+id/imageButton1"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:drawableLeft="@drawable/mybutton"
+       android:onClick="onClick"
+       android:text="My image Button"
+  />
+
+   <!--
+      이미지와 텍스트를 함께 버튼에 출력하고 싶은 경우
+      <Button)위젯의 android:drawbleTop, android:drawableleft, android:drawableRight 와 같은 속성을 사용하자
+
+      이미지와 텍스트간의 간격을 줄때
+      android: drawablePadding속성의 값으로 설정한다.
+
+
+   -->
+
+</LinearLayout>

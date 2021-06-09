@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--imageView 위젯
+    -아이콘 이미지와 같은 이미지들을 간단하게 표시하는데 사용되는 위젯(뷰)
+    -ImageView 클래스는 TextView클래스를 확장한 것으로 이미지를 표시할 수 있는 Textview라고 생각하면 된다.
+
+    ImageView 클래스의 속성중에서
+
+    src속성 : 이미지를 표시하기 위해 이미지 파일이 있는 경로를 설정하는 속성
+    android:src="@참조할패키지경로/이미지파일이름"
+
+    android:adjustViewBounds 속성
+    true : 이미지뷰의 가로,세로를 조정할 수 있도록 설정
+
+    android:maxHeight="100dp"
+    android:maxWidth="200dp"
+    이미지뷰의 최대 높이, 넓이 설정
+
+-->
+
+
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:adjustViewBounds="true"
+    android:maxHeight="100dp"
+    android:maxWidth="200dp"
+    android:tint="#4F9683B6"
+    android:src="@drawable/androids"
+
+    >
+
+
+</ImageView>
+

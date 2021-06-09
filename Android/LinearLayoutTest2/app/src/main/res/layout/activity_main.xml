@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    리니어 레이아웃 내부에 다시 두개의 리니어 레이아웃 객체를 정의하고
+    각 리니어 레이아웃 객체 내부에 버튼객체를 정의한다.
+    각버튼의 마진과 패딩의 값을 서로 다르게 설정한다.
+-->
+
+
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#9FC93C"
+    >
+
+    <LinearLayout
+        android:background="#FF0000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+    >
+
+        <Button
+            android:id="@+id/button1"
+            android:text="마진=2 패딩=2"
+            android:layout_margin="2pt"
+            android:padding="2pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#2196F3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="마진=8 패딩=8"
+            android:layout_margin="8pt"
+            android:padding="8pt"
+        />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

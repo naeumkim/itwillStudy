@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    TextView 위젯
+    화면에 간단한 텍스트를 출력하는 뷰(위젯)
+    레이블,라벨이라고도 부른다.
+    사용되는 곳 : 설명, 제목등에 많이 사용됨
+
+    이름 :  [     ]
+
+    이름 < 텍스트뷰 위젯영역으로 나타낸다.
+
+    TextView 위젯의 속성(변수)
+    속성           설정메소드                          설명
+    text           settext(CharSequence)          표시할 텍스트를 TextView위젯에 설정하는 메소드
+    textColor      setTextColor(ColorStatList)    표시할 텍스트의 색상을 설정하는 메소드
+    textSize       setTextSize(float)             표시할 텍스트의 크기를 설정하는 메소드
+    textStyle      setTypeStyle(Typeface)         표시할 텍스트 스타일(bold,italic,bolditalic)을 설정하는 메소드
+    typeFace       setTypeface(Typeface)          표시할 텍스트 폰트 종류 설정하는 메소드
+    width          setWidth(int)                  픽셀단위로 텍스트뷰의 너비를 설정하는 메소드
+    height         setHeight(int)                 픽셀단위로 텍스트뷰의 높이를 설정하는 메소드
+    Lines          setLines(int)                  TextView의 높이를 설정하는 메소드
+
+    EditText 위젯
+    - 입력이 가능한 텍스트 필드
+    - 텍스트 필드라고도 부른다.
+    - EditText위젯은 Textview위젯의 자식클래스이다.
+    - ex ) ㅡㅡㅡㅡ < 입력할 수 있는 공간을 나타냄
+
+    EditText위젯의 속성(변수)
+    참고 : 다음은 TextView클래스에서 상속받은 속성들임
+    속성                 설명
+    autoText            자동으로 타이핑 오류를 교정하는 속성
+    drawableBottom      텍스트의 아래에 표시되는 이미지 리소스를 설정하는 속성
+    drawableRight       텍스트의 오른쪽에 표시되는 이미지 리소스를 설정하는 속성
+    editable            입력한 데이터를 편집가능하게 할 것인지 여부를 설정하는 속성
+    text                표시되는 텍스트를 설정하는 속성
+    singleLine          값을 true로 설정하면 한줄만 입력받게 설정하는 속성
+    inputtype           입력할 데이터의 종류를 설정하는 속성
+    hint                입력필드에 표시되는 힌트메세지를 설정하는 속성
+
+
+
+    inputtype
+    숫자만 입력할 수 있는 입력공간 만들기 : android:inputType="numberPassword"
+    MainActivity.java코드에서 inputType속성의 값을 변경하는 방법
+    > setInputType() 메소드 호출!
+
+    android : inputType속성에 설정할 수 있는 값
+    속성에 대한 값           설명
+    none                   편집이 불가능한 문자열
+    Text                    일반적인 문자열
+    textMultiLint          여러줄로 입력가능하게 설정
+    textPostalAddress       우편번호
+    testEmailAddress        이메일
+    textPassword            비밀번호
+    textVisivlePassword     비밀번호가 보이게 설정
+    number                  숫자
+    phone                   전화번호
+    datetime                시간을 입력하게 설정
+    numberSigned             부호가 붙은 숫자를 입력하게 설정
+    numberDecinal             소수점이 있는 숫자를 입력하게 설정
+
+
+
+    EditText위젯의 속성
+    참고 : view클래스에서 상속받은 속성들임
+
+    속성                     설명
+    background              배경이미지 리소스를 설정하는 속성
+    id                      뷰를 식별할 수 있는 고유값을 설정하는 속성
+    onclick                 뷰가 클릭되었을때 호출되는 메소드를 설정하는 속성
+    visibility              뷰의 가시유무를 결정하는 속성
+
+
+
+
+
+
+
+-->
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is a test"
+        android:background="#0000FF"
+        android:textColor="#FF0000"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:typeface="serif"
+        />
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="여기에 입력할 수 있습니다."
+        android:inputType="text"
+        android:singleLine="true"
+
+        />
+
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="패스워드 입력"
+        android:inputType="numberPassword"
+
+
+        />
+    <EditText
+        android:id="@+id/edit3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="010-xxxx-xxxx"
+        android:inputType="phone"
+
+
+        />
+
+
+
+</LinearLayout>

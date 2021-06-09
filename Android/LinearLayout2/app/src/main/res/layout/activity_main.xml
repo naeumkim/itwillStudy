@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:baselineAligned="true"
+    >
+
+    <!--
+        android:baselineAligned="true"
+        자식뷰(위젯)들을 하단을 정렬시킨다는 뜻
+
+    -->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The"
+        android:textSize="10pt"
+        android:textColor="#19615B"
+
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="World"
+        android:textSize="10pt"
+        android:textColor="#2A3B97"
+
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="of Android"
+        android:textSize="15pt"
+        android:textColor="#652DB3"
+
+
+        />
+
+
+
+</LinearLayout>

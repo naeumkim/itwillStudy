@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <!--
+    LinearLayout의 gravity속성이 가질 수 있는 값
+
+    상수                설명
+    center             자식뷰를 컨테이너의 수평,수직의 중앙에 배치
+    fill               자식뷰가 컨테이너를 가득 채우도록 배치
+    top                자식뷰를 컨테이너의 상단에 배치, 크기를 변경하지 않음
+    bottom             자식뷰를 컨테이너의 하단에 배치, 크기를 변경하지 않음
+    left               자식뷰를 컨테이너의 좌측에 배치, 크기를 변경하지 않음
+    right              자식뷰를 컨테이너의 우측에 배치, 크기를 변경하지 않음
+    center_vertical    자식뷰를 컨테이너의 수직의 중앙배치, 크기를 변경하지 않음
+    center_horizontal  자식뷰를 컨테이너의 수평의 중앙배치, 크기를 변경하지 않음
+    fill_vertical      자식뷰를 컨테이너의 수직을 채우도록 배치
+    fill_horizontal    자식뷰를 컨테이너의 수평을 채우도록 배치
+
+    android:gravity="center" 자식 뷰를 중앙에 배치할 것이라는 의미이다. -->
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼 1"
+
+        />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼 2"
+
+        />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼 3"
+
+        />
+
+
+
+</LinearLayout>
