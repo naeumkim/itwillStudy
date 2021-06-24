@@ -1,0 +1,135 @@
+스프링.txt
+스프링 웹프로젝트 구성
+
+1. Presentation Layer(tier) : UI 담당역역 / 웹.모바일
+
+    >jsp(view) / html,css,js
+
+    >controller
+
+2. Business Logic Layer : 서비스 계층(액션페이지 같은 경우를 말함) 고객의 요구사항을 반영하는 계층
+
+    >Service(Model의 역할)
+
+3. Data Access Layer : Persistence Layer / DB 데이터 처리 계층(DAO 같은 경우)
+    - DAO
+    - MyBatis : DB와 DAO객체 사이에서 효율적인 데이터 처리를 위한 프레임 워크 (SQL Mapper 라이브러리)
+        - 간결한 코드 처리 : 예외처리,pstmt,rs객체를 처리
+        - sql 구문을 분리 : xml/어노테이션을 사용한 처리가능
+        - spring과 자동연동
+        - 동적 SQL 사용가능
+
+    [MyBatis - 마이바티스 3 | 소개](https://mybatis.org/mybatis-3/ko/index.html)
+
+4. DB 계층
+
+    >Mysql
+
+    ### *MyBatis - 스프링 연동 처리 객체
+
+    스프링 연동 처리 객체 
+
+    > sqlSessionFactory 객체 : 디비연결, SQL 실행관련 동작
+
+    ⇒sqlSessionFactoryBean 클래스를 사용해서 해당객체를 생성
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    ### 스프링 웹프로젝트 구성
+
+1. Presentation Layer(tier) : UI 담당역역 / 웹.모바일
+
+    >jsp(view) / html,css,js
+
+    >controller
+
+2. Business Logic Layer : 서비스 계층(액션페이지 같은 경우를 말함) 고객의 요구사항을 반영하는 계층
+
+    >Service(Model의 역할)
+
+3. Data Access Layer : Persistence Layer / DB 데이터 처리 계층(DAO 같은 경우)
+    - DAO
+    - MyBatis : DB와 DAO객체 사이에서 효율적인 데이터 처리를 위한 프레임 워크 (SQL Mapper 라이브러리)
+        - 간결한 코드 처리 : 예외처리,pstmt,rs객체를 처리
+        - sql 구문을 분리 : xml/어노테이션을 사용한 처리가능
+        - spring과 자동연동
+        - 동적 SQL 사용가능
+
+    [MyBatis - 마이바티스 3 | 소개](https://mybatis.org/mybatis-3/ko/index.html)
+
+4. DB 계층
+
+    >Mysql
+
+    ### *MyBatis - 스프링 연동 처리 객체
+
+    스프링 연동 처리 객체 
+
+
+
+
+
+
+
+    > sqlSessionFactory 객체 : 디비연결, SQL 실행관련 동작
+
+    ⇒sqlSessionFactoryBean 클래스를 사용해서 해당객체를 생성
+
+    ```xml
+    <!-- SqlSessionFactory 객체 -->
+    	<bean id="sqlSessionFactory"
+    		class="org.mybatis.spring.SqlSessionFactoryBean"
+    		>
+    	
+    	</bean>
+    	<!-- SqlSessionFactory 객체 -->
+    </beans>
+    ```
+
+    class를 빈으로 만들어서 쓰겠다.
+
+    DTD는 형식을 꼭 확인해야한다.
+
+    ### 스프링 MVC(model2)방식
+
+    - 기존 MVC
+
+        요청 > Controller > Model  > DB
+
+                               > View
+
+        FrontController 패턴을 사용한 MVC > 위임(Delegation)동작을 통해서 일부 컨트롤러를 분리해서 사용
+
+    - Spring
+
+        요청 > Front > Controller > Service(Model) > DAO > MyBatis >  DB
+
+             Controller
+
+         \    \
+
+        /View
+
+    1. 스프링 MVC 처리하는 작업
+        - URI를 분석해서 적당한 컨트롤러를 매핑
+        - 컨트롤러에 필요한 메서드 호출
+        - 컨트롤러의 결과데이터를 뷰로 전달하는 작업]
+
+        - 파라미터의 수집
+
+    2. 개발자가 처리해야하는 작업
+        - 특정 URI에 해당하는 컨트롤러 생성
+        - 서비스 객체를 생성
+        - DAO 객체의 생성
+        - 컨트롤러의 처리를 담당하는 메서드 생성
+        - 뷰에서 전달받은 데이터 출력
+    
+    
+    
